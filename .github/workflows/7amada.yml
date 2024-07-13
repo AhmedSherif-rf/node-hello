@@ -25,10 +25,11 @@ jobs:
       - name: permission adjust 
         run: chmod 400 test2.pem
    
-
+      - name: mv 
+        run: mv test2.pem ../
 
       - name: copy files to server 
-        run: scp -o StrictHostKeyChecking=no -i test2.pem -r * ubuntu@3.87.1.36:/home/ubuntu
+        run: scp -o StrictHostKeyChecking=no -i ../test2.pem -r * ubuntu@3.87.1.36:/home/ubuntu
 
 
 
