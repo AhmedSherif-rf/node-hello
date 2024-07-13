@@ -21,7 +21,10 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-
+      
+      - name: permission adjust 
+        run: chmod 400 test2.pem
+   
       - name: copy files to server 
         run: scp -o StrictHostKeyChecking=no -i test2.pem * ubuntu@3.87.1.36:/home/ubuntu
 
