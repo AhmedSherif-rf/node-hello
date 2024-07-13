@@ -22,6 +22,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: copy files to server 
+        run: scp -i Downloads/test2.pem * ubuntu@3.87.1.36:/home/ubuntu
+
+        
+
+
     #   # Optionally, you can cache node_modules to speed up subsequent builds
     #   - name: Cache node_modules
     #     uses: actions/cache@v2
