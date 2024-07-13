@@ -31,6 +31,8 @@ jobs:
       - name: copy files to server 
         run: scp -o StrictHostKeyChecking=no -i ../test2.pem -r * ubuntu@3.87.1.36:/home/ubuntu/node-hello
 
+      - name: Trigger depl script
+        run: ssh -o StrictHostKeyChecking=no -i ../test2.pem  ubuntu@3.87.1.36 sh /home/ubuntu/node.sh
 
 
     #   # Optionally, you can cache node_modules to speed up subsequent builds
